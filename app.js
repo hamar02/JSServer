@@ -1,7 +1,8 @@
 const http = require("http");
+const requestHandler = require("./routes");
 
 function rqListener(req, res){
-    console.log(req);
+    requestHandler(req, res);
 };
 
 const server = http.createServer(rqListener);
